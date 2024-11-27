@@ -57,12 +57,26 @@ function updateSummary() {
         }
 
         const row = document.createElement('div');
-        row.textContent = `${align(index + 1,4)}: ${align(transaction.note,20)} | Card: ${align(transaction.card.toFixed(2),6)} | Savings: ${align(transaction.savings.toFixed(2),6)} | Wallet: ${align(transaction.wallet.toFixed(2),6)} | Flagged: ${transaction.flag}`;
+        row.textContent = `${align(transaction.note,20)} | Card: ${align(transaction.card.toFixed(2),6)} | Savings: ${align(transaction.savings.toFixed(2),6)} | Wallet: ${align(transaction.wallet.toFixed(2),6)}`;
         if (transaction.flag) {
             row.classList.add('flagged'); // CSS class for highlighting
             row.setAttribute('data-flagged', 'true'); // Optional: for semantic use
         }
-    
+        if (transaction.card +
+            transaction.savings +
+            transaction.wallet +
+            transaction.house +
+            transaction.snacks + transaction.stuff>0) {row.classList.add("positive")}
+        else if (transaction.card +
+            transaction.savings +
+            transaction.wallet +
+            transaction.house +
+            transaction.snacks + transaction.stuff<0) {
+                row.classList.add("negative");
+            }
+        else {
+            row.classList.add("transfer");
+        }
         summaryDiv.appendChild(row);
     });
 
