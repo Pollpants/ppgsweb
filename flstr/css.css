@@ -1,24 +1,64 @@
 body {
-    background-color: darkgreen;
-    color: white;
+    background-color: blue;
+    color: greenyellow;
     font-family: "Courier New" 
 }
 /* Highlight rows with the .flagged class */
 
 .flagged {
-    background-color: #8BA679; /* Light red background */
+    background-color: greenyellow; /* Light red background */
     font-weight: bold;        /* Bold text */
-    color: red;
-    background-blend-mode: color-burn;
+    color: blue;
+
 }
 
-/* Optional: Target rows using the data-flagged attribute */
-div[data-flagged="true"] {
-    border-left: 4px solid red; /* Add a red border for flagged rows */
+.positive {
+    border-left: 5px solid green;
+
+}
+.negative {
+    border-left: 5px solid red;
+}
+.transfer {
+    border-left: 5px solid greenyellow;
+}
+.headbar {
+    font-size: 5vh;
+    text-align: center;
+    background-color: rgb(0, 0, 204);
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 10vh;
 }
 #summary {
-    border: 5px solid gray;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
 
+    color:white;
+    border: 5px solid greenyellow;
+    background-color: rgb(0, 0, 204);
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+    width:95%;
+    font-size: 2vw;
+    margin-left: 2.5%;
+    text-align: center;
+    margin-top: 12vh;
+}
+button{
+    float: left;
+    width: 23vw;
+    border: solid greenyellow 5px;
+    height: 5vh;
+    background-color: greenyellow;
+    color: blue;
+    font-size: 2vw;
+}
+button:hover{
+    background-color: green;
+    border-color: green;
+}
+#left {
+    margin-left: 2.5%;
+}

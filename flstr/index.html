@@ -7,12 +7,12 @@
     <title>Text File Modifier</title>
 </head>
 <body>
-    <h1>Transaction Manager</h1>
+    <div class="headbar">Transaction Manager</div>
     <div id="summary"></div>
-    <button onclick="createTransaction()">Create New Transaction</button>
-    <button onclick="clearData()">Clear Data</button>
-    <button onclick="downloadData()">Download Data</button>
-    <button onclick="removeAllFlags()">Remove All Flags</button>
+    <button onclick="createTransaction()" id="left">New</button>
+    <button onclick="clearData()">Clear</button>
+    <button onclick="downloadData()">Download</button>
+    <button onclick="removeAllFlags()">Unmark All</button>
     <label for="uploadInput" style="cursor: pointer; text-decoration: underline; color: blue;">Upload Data</label>
     <input id="uploadInput" type="file" accept="application/json" style="display: none;" onchange="uploadData(event)">
     <pre id="output"></pre>
