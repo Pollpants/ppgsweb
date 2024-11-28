@@ -57,7 +57,7 @@ function updateSummary() {
         }
 
         const row = document.createElement('div');
-        row.textContent = `${align(transaction.note,20)} | Card: ${align(transaction.card.toFixed(2),6)} | Savings: ${align(transaction.savings.toFixed(2),6)} | Wallet: ${align(transaction.wallet.toFixed(2),6)}`;
+        row.textContent = `${align(transaction.note,20)}|${align(transaction.card.toFixed(2),6)}|${align(transaction.savings.toFixed(2),6)}|${align(transaction.wallet.toFixed(2),6)}`;
         if (transaction.flag) {
             row.classList.add('flagged'); // CSS class for highlighting
             row.setAttribute('data-flagged', 'true'); // Optional: for semantic use

@@ -13,52 +13,77 @@ body {
 }
 
 .positive {
-    border-left: 5px solid green;
+    border-left: 1vw solid green;
 
 }
 .negative {
-    border-left: 5px solid red;
+    border-left: 1vw solid red;
 }
 .transfer {
-    border-left: 5px solid greenyellow;
+    border-left: 1vw solid greenyellow;
 }
 .headbar {
-    font-size: 5vh;
+    font-size: 7vw;
     text-align: center;
     background-color: rgb(0, 0, 204);
-    width: 100%;
+    border: 1vw solid greenyellow;
     position: fixed;
-    left: 0px;
-    right: 0px;
+    left: 1vw;
+    right: 1vw;
     top: 0px;
-    height: 10vh;
+    height: 20vw;
 }
 #summary {
 
     color:white;
-    border: 5px solid greenyellow;
+    border: 1vw solid greenyellow;
     background-color: rgb(0, 0, 204);
     border-top-left-radius: 1%;
     border-top-right-radius: 1%;
-    width:95%;
-    font-size: 2vw;
-    margin-left: 2.5%;
+    font-size: 3.5vw;
     text-align: center;
     margin-top: 12vh;
+    left: 2vw;
+    right:2vw
 }
-button{
+.options{
     float: left;
-    width: 23vw;
-    border: solid greenyellow 5px;
-    height: 5vh;
+    width: 25%;
+    border: solid greenyellow 1vw;
+    height: 5vw;
     background-color: greenyellow;
     color: blue;
-    font-size: 2vw;
+    font-size: 3vw;
+    text-align: center;
 }
-button:hover{
+.options:hover{
     background-color: green;
-    border-color: green;
+
+}
+.options:active {
+    background-color: blue;
+    color: greenyellow;
 }
 #left {
-    margin-left: 2.5%;
+    left:2vw
+}
+label{
+    float: left;
+    width: 98%;
+    border: solid greenyellow 1vw;
+    height: 5vw;
+    background-color: greenyellow;
+    color: blue;
+    font-size: 3vw;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom-left-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+}
+label:hover {
+    background-color: green;
+}
+label:active {
+    background-color: blue;
+    color: greenyellow;
 }
