@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <script>
+        function rechnen() {
+            werte = document.getElementById("fach").value;
+            maxerste = parseInt(werte.slice(0,2));
+            maxzweite = parseInt(werte.slice(2,4));
+            maxpruefung = parseInt(werte.slice(4,6));
+            ersteSemester = parseFloat(document.getElementById("erste").value)*(maxerste/20);
+            zweiteSemester = parseFloat(document.getElementById("zweite").value)*(maxzweite/20);
+            ziel = parseFloat(document.getElementById("ziel").value)/100;
+            note = (maxerste+maxzweite+maxpruefung)*ziel-ersteSemester-zweiteSemester;
+            document.getElementById("note").innerText = note+"/"+maxpruefung;
+            if (note > maxpruefung) {
+                best = (ersteSemester+zweiteSemester+maxpruefung)/(maxerste+maxzweite+maxpruefung)*100
+                document.getElementById("comment").innerText="Ziel nicht möglich. Mögliche Ziel :"+best+"%"
+            }
+            else if (note > 0) {
+                document.getElementById("comment").innerText=""
+            }
+            else {
+                lazy = (ersteSemester+zweiteSemester)/(maxerste+maxzweite+maxpruefung)*100
+                document.getElementById("comment").innerText="EZ; Du kannst ein 0 schreiben und du wirst immer noch " + lazy + "% bekommen"
+            }
+
+        }
+
+        
+    </script></head>
+
+    <body>
+        <h1>Prüfungsrechner 4TBEM</h1>
+        <h3>Fach
+            <select id="fach">
+                <option value="506060">Deutsch</option>
+                <option value="506060">Französisch</option>
+                <option value="304040">Geschichte</option>
+                <option value="304040">Erdkunde</option>
+                <option value="708080">Mathe</option>
+                <option value="204000">Sport</option>
+                <option value="304040">English</option>
+                <option value="304040">Mechanik</option>
+                <option value="304040">Elektrotechnik</option>
+                <option value="304040">Angewandte Mathe</option>
+                <option value="304040">FK + WK</option>
+                <option value="304040">Informatik</option>
+                <option value="708000">BP Mec</option>
+                <option value="304040">TZ Eli</option>
+                <option value="708000">BP Eli</option>
+
+            </select>
+        </h3> 
+        <h3>Note erste Semester <input type="number" id="erste">/20</h3>
+        <h3>Note zweite Semester <input type="number" id = "zweite">/20</h3>
+        <h3>Ziel: <input type="number" id="ziel" value="50">% </h3>
+        <button onclick="rechnen()">Rechnen</button>
+        <h3>Gebrauchte Note : <a id="note">//</a></h3>
+        <h3 id="comment"></h3>
+
+    </body>
+</html>
